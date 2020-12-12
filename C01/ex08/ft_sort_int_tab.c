@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 16:34:01 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/11 12:06:17 by acaravan         ###   ########.fr       */
+/*   Created: 2020/12/10 15:56:27 by acaravan          #+#    #+#             */
+/*   Updated: 2020/12/10 16:10:58 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_factorial(int nb)
+void	ft_sort_int_tab(int *tab, int size)
 {
 	int i;
-	int result;
+	int j;
+	int temp;
+	int minPos;
 
 	i = 0;
-	result = 1;
-	if (!(nb >= 0))
-		return (1);
-	while (i < nb)
+	while (i < size - 1)
 	{
-		result = result * (nb - i);
+		minPos = i;
+		while (j < size)
+		{
+			j = i + 1;
+			if (tab[j] < tab[minPos])
+				minPos = j;
+			j++;
+		}
+		temp = tab[i];
+		tab[i] = tab[minPos];
+		tab[minPos] = temp;
 		i++;
 	}
-	return (result);
 }

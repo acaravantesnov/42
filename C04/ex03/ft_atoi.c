@@ -6,7 +6,7 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 19:12:41 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/08 19:27:41 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/10 15:07:42 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	minus_count = 0;
 	devolveri = 0;
-	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n') &&
+	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n') ||
 		(str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
 		i++;
 	while ((str[i] == '+') || (str[i] == '-'))

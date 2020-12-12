@@ -6,7 +6,7 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 16:37:49 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/09 16:50:36 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/11 10:31:53 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int		ft_iterative_power(int nb, int power)
 	result = 1;
 	if ((nb == 0) && (power == 0))
 		return (1);
+	else if (power < 0)
+		return (0);
 	else
 	{
 		while (i <= power)

@@ -6,7 +6,7 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:20:43 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/09 17:55:12 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/10 16:43:09 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strstr(char *str, char *to_find)
 	while (str[i] != '\0')
 	{
 		j = 0;
-		if(str[i] == to_find[j])
+		if (str[i] == to_find[j])
 		{
 			k = i;
 			while (str[k] == to_find[j])
