@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   main.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manmarti <manmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 16:48:06 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/13 16:23:48 by acaravan         ###   ########.fr       */
+/*   Created: 2020/12/13 13:57:12 by manmarti          #+#    #+#             */
+/*   Updated: 2020/12/13 20:54:26 by manmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
-{
-	int		count;
+#ifndef MAIN_H
+# define MAIN_H
 
-	count = 1;
-	if (nb == 1)
-		return (1);
-	if (nb == 4)
-		return (2);
-	while (count < (nb / 2))
-	{
-		if ((count * count) == nb)
-			return (count);
-		count++;
-	}
-	return (0);
-}
+int		ft_gerror(char **argv, int argc);
+char	**ft_slicer(char *argv);
+char	*ft_dict(char *file);
+char	**ft_cooldict(char *dict);
+
+#endif

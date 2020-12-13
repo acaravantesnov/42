@@ -6,26 +6,11 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 15:01:01 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/10 15:38:50 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/13 21:26:24 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-int	ft_strlen(char *str)
-{
-	int i;
-	int elementos;
-
-	i = 0;
-	elementos = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-		elementos++;
-	}
-	return (elementos);
-}
 
 int	main(int argc, char *argv[])
 {
@@ -37,7 +22,7 @@ int	main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = 0;
-		while (j < ft_strlen(&argv[i][0]))
+		while (argv[i][j] != '\0')
 		{
 			write(1, &argv[i][j], 1);
 			j++;

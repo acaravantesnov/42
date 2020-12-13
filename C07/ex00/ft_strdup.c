@@ -1,29 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/09 16:48:06 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/13 16:23:48 by acaravan         ###   ########.fr       */
+/*   Created: 2020/12/12 14:56:42 by acaravan          #+#    #+#             */
+/*   Updated: 2020/12/13 11:21:39 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
-{
-	int		count;
+#include <stdlib.h>
 
-	count = 1;
-	if (nb == 1)
-		return (1);
-	if (nb == 4)
-		return (2);
-	while (count < (nb / 2))
+int		ft_strlen(char *str);
+
+char	*ft_strdup(char *src)
+{
+	char *ptr;
+	char *start;
+
+	ptr = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	start = ptr;
+	while (*src)
 	{
-		if ((count * count) == nb)
-			return (count);
+		*ptr = *src;
+		ptr++;
+		src++;
+	}
+	*ptr = '\0';
+	return (start);
+}
+
+int		ft_strlen(char *str)
+{
+	int i;
+	int count;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		i++;
 		count++;
 	}
-	return (0);
+	return (count);
 }

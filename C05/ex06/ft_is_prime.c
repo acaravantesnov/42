@@ -6,11 +6,9 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 10:52:47 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/12 13:56:06 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/13 11:04:01 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_is_prime(int nb)
 {
@@ -38,9 +36,4 @@ int	ft_is_prime(int nb)
 		}
 	}
 	return (1);
-}
-
-int main(){
-	int x = ft_is_prime(6);
-	printf("%i",x);
 }
