@@ -6,7 +6,7 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 14:46:38 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/04 11:46:18 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/15 15:25:44 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	sustituir(int n1, int n2);
+void	sustituir(int n1, int n2)
+{
+	ft_putchar((n1 / 10) + 48);
+	ft_putchar((n1 % 10) + 48);
+	ft_putchar(' ');
+	ft_putchar((n2 / 10) + 48);
+	ft_putchar((n2 % 10) + 48);
+}
 
 void	ft_print_comb2(void)
 {
@@ -44,13 +51,4 @@ void	ft_print_comb2(void)
 			n2++;
 		}
 	}
-}
-
-void	sustituir(int n1, int n2)
-{
-	ft_putchar((n1 / 10) + 48);
-	ft_putchar((n1 % 10) + 48);
-	ft_putchar(' ');
-	ft_putchar((n2 / 10) + 48);
-	ft_putchar((n2 % 10) + 48);
 }

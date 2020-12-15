@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/12/14 14:02:23 by acaravan          #+#    #+#              #
-#    Updated: 2020/12/14 15:26:04 by acaravan         ###   ########.fr        #
+#    Created: 2020/12/15 16:14:34 by acaravan          #+#    #+#              #
+#    Updated: 2020/12/15 16:15:01 by acaravan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ CC = cc
 
 all:	
 		$(CC) $(FLAGS) $(SRCS) -o $(NAME)
-
 clean:
 		$(CLEAN) $(NAME)
 fclean:	clean

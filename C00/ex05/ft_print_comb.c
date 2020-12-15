@@ -6,11 +6,20 @@
 /*   By: acaravan <acaravan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 10:29:43 by acaravan          #+#    #+#             */
-/*   Updated: 2020/12/04 11:54:52 by acaravan         ###   ########.fr       */
+/*   Updated: 2020/12/15 15:46:19 by acaravan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	sino(char *a, char *b, char *c)
+{
+	write(1, a, 1);
+	write(1, b, 1);
+	write(1, c, 1);
+	if (*a != '7')
+		write(1, ", ", 2);
+}
 
 void	ft_print_comb(void)
 {
@@ -35,15 +44,8 @@ void	ft_print_comb(void)
 		}
 		else
 		{
-			write(1, &a, 1);
-			write(1, &b, 1);
-			write(1, &c, 1);
-			write(1, ", ", 2);
+			sino(&a, &b, &c);
 			c++;
 		}
 	}
-}
-
-int main(){
-	ft_print_comb();
 }
